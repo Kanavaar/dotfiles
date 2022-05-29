@@ -1,2 +1,2 @@
-# dotfiles
-my dotfiles
+my config files for
+awesomewm, alacritty and much more
