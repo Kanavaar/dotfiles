@@ -1,3 +1,3 @@
 my config files for
-awesomewm, alacritty and picom
+awesomewm, alacritty, picom and vim
 
