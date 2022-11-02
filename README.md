@@ -13,3 +13,6 @@ rofi/dmenu scrot(screenshot util)
 
 ## Themes
 Papirus icons theme, fluent dark
+
+## zsh
+[oh-my-zsh](https://ohmyz.sh) and exa instead of ls
