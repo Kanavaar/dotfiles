@@ -1,3 +1,15 @@
-my config files for
-awesomewm, alacritty, picom and vim
+# Dotfiles
 
+## Config for awesome, alacritty, slock, (oh my) zsh and my scripts
+
+## For awesome you need
+firefox lxappearce alacritty volumeicon Iosevka font neovim and my scripts
+
+## For alacritty you need
+Iosevka font
+
+## For scripts you need 
+rofi/dmenu scrot(screenshot util)
+
+## Themes
+Papirus icons theme, fluent dark

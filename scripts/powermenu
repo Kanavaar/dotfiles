@@ -1,0 +1,11 @@
+#! /bin/sh
+
+CHOSEN=$(printf "Power Off\nRestart\nLock\nLogout" | rofi -dmenu)
+
+case $CHOSEN in
+  "Power Off") shutdown now ;;
+  "Restart") reboot now ;;
+  "Lock") slock ;;
+  "Logout") loginctl kill-user $USER ;;
+  *) exit 1 ;;
+esac
