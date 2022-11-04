@@ -45,7 +45,7 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init(gears.filesystem.get_configuration_dir() .. "themes/theme.lua")
+beautiful.init(gears.filesystem.get_configuration_dir() .. "themes/edge.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "alacritty"
@@ -472,7 +472,6 @@ awful.rules.rules = {
           "Tor Browser", -- Needs a fixed window size to avoid fingerprinting by screen size.
           "Wpa_gui",
           "veromix",
-      	  "feh",
           "xtightvncviewer"},
 
         -- Note that the name property shown in xprop might be set slightly after creation of the client
@@ -491,6 +490,19 @@ awful.rules.rules = {
         placement = awful.placement.centered, 
           }
       },
+
+    -- Fullscreen
+    { rule_any = {
+        class = {
+          "feh",
+          "mpv",
+        },
+      }, properties = {
+        fullscreen = true,
+      }
+    },
+
+
 
     -- Add titlebars to normal clients and dialogs
     { rule_any = {type = { "normal", "dialog" }

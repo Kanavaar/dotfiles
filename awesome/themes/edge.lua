@@ -1,5 +1,5 @@
 ---------------------------
--- Tilman's awesome theme --
+-- Edge awesome theme --
 ---------------------------
 
 local theme_assets = require("beautiful.theme_assets")
@@ -19,16 +19,16 @@ theme.bg_urgent     = "#282828"
 theme.bg_minimize   = "#282828"
 theme.bg_systray    = theme.bg_normal
 
-theme.fg_normal     = "#ebdbb2"
-theme.fg_focus      = "#458588"
-theme.fg_urgent     = "#cc241d"
+theme.fg_normal     = "#c5cdd9"
+theme.fg_focus      = "#6cb6eb"
+theme.fg_urgent     = "#ec7279"
 theme.fg_minimize   = "#a89984"
 
 theme.useless_gap   = dpi(2)
 theme.border_width  = dpi(2)
-theme.border_normal = "#282828"
-theme.border_focus  = "#458588"
-theme.border_marked = "#91231c"
+theme.border_normal = theme.bg_normal
+theme.border_focus  = theme.fg_focus
+theme.border_marked = theme.fg_urgent
 
 -- There are other variable sets
 -- overriding the default one when

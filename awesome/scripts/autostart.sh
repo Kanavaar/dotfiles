@@ -1,1 +1,1 @@
-feh --bg-scale ~/.config/stairs.jpg
+feh --bg-scale ~/wallpapers/gruv/stairs.jpg
