@@ -10,6 +10,8 @@ require("awful.autofocus")
 local wibox = require("wibox")
 -- Theme handling library
 local beautiful = require("beautiful")
+-- Themes define colours, icons, font and wallpapers.
+beautiful.init(gears.filesystem.get_configuration_dir() .. "themes/edge.lua")
 -- Notification library
 local naughty = require("naughty")
 local menubar = require("menubar")
@@ -44,8 +46,6 @@ end
 -- }}}
 
 -- {{{ Variable definitions
--- Themes define colours, icons, font and wallpapers.
-beautiful.init(gears.filesystem.get_configuration_dir() .. "themes/edge.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "alacritty"
@@ -241,23 +241,35 @@ globalkeys = gears.table.join(
 
     awful.key({ modkey,           }, "j",
         function ()
-            awful.client.focus.byidx( 1)
+            awful.client.focus.global_bydirection("down")
         end,
         {description = "focus next by index", group = "client"}
     ),
     awful.key({ modkey,           }, "k",
         function ()
-            awful.client.focus.byidx(-1)
+            awful.client.focus.global_bydirection("up")
         end,
         {description = "focus previous by index", group = "client"}
     ),
     awful.key({ modkey,           }, "w", function () mymainmenu:show() end,
               {description = "show main menu", group = "awesome"}),
+    awful.key({ modkey,           }, "l",     function () awful.client.focus.global_bydirection("right")          end,
+              {description = "change active window to the right", group = "client"}),
+    awful.key({ modkey,           }, "h",     function () awful.client.focus.global_bydirection("left")           end,
+              {description = "change active window to the left", group = "client"}),
+    awful.key({ modkey, "Shift"   }, "h",     function () awful.client.swap.global_bydirection("left") end,
+              {description = "swap window to the left", group = "client"}),
+    awful.key({ modkey, "Shift"   }, "l",     function () awful.client.swap.global_bydirection("right") end,
+              {description = "swap window to the right", group = "client"}),
+    awful.key({ modkey, "Control" }, "h",     function () awful.tag.incncol( 1, nil, true)    end,
+              {description = "increase the number of columns", group = "layout"}),
+    awful.key({ modkey, "Control" }, "l",     function () awful.tag.incncol(-1, nil, true)    end,
+              {description = "decrease the number of columns", group = "layout"}),
 
     -- Layout manipulation
-    awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.byidx(  1)    end,
+    awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.global_bydirection("down")    end,
               {description = "swap with next client by index", group = "client"}),
-    awful.key({ modkey, "Shift"   }, "k", function () awful.client.swap.byidx( -1)    end,
+    awful.key({ modkey, "Shift"   }, "k", function () awful.client.swap.global_bydirection("up")    end,
               {description = "swap with previous client by index", group = "client"}),
     awful.key({ modkey, "Control" }, "j", function () awful.screen.focus_relative( 1) end,
               {description = "focus the next screen", group = "screen"}),
@@ -273,6 +285,10 @@ globalkeys = gears.table.join(
             end
         end,
         {description = "go back", group = "client"}),
+    awful.key({ modkey,           }, "space", function () awful.layout.inc( 1)                end,
+              {description = "select next", group = "layout"}),
+    awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(-1)                end,
+              {description = "select previous", group = "layout"}),
 
     -- Standard program
     awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end,
@@ -283,25 +299,9 @@ globalkeys = gears.table.join(
               {description = "quit awesome", group = "awesome"}),
     awful.key({ modkey, "Shift" }, "s", function () awful.spawn.with_shell("screenshot select") end,
               {description = "select area of screenshot", group = "screenshot"}),
-    awful.key({ modkey }, "v", function () awful.spawn(terminal .. " -t alsamixer -e alsamixer") end,
-              {description = "spawn alsamixer", group = "sound"}),
+    awful.key({ modkey }, "v", function () awful.spawn(terminal .. " -t pulsemixer -e pulsemixer") end,
+              {description = "spawn pulsemixer", group = "sound"}),
 
-    awful.key({ modkey,           }, "l",     function () awful.tag.incmwfact( 0.05)          end,
-              {description = "increase master width factor", group = "layout"}),
-    awful.key({ modkey,           }, "h",     function () awful.tag.incmwfact(-0.05)          end,
-              {description = "decrease master width factor", group = "layout"}),
-    awful.key({ modkey, "Shift"   }, "h",     function () awful.tag.incnmaster( 1, nil, true) end,
-              {description = "increase the number of master clients", group = "layout"}),
-    awful.key({ modkey, "Shift"   }, "l",     function () awful.tag.incnmaster(-1, nil, true) end,
-              {description = "decrease the number of master clients", group = "layout"}),
-    awful.key({ modkey, "Control" }, "h",     function () awful.tag.incncol( 1, nil, true)    end,
-              {description = "increase the number of columns", group = "layout"}),
-    awful.key({ modkey, "Control" }, "l",     function () awful.tag.incncol(-1, nil, true)    end,
-              {description = "decrease the number of columns", group = "layout"}),
-    awful.key({ modkey,           }, "space", function () awful.layout.inc( 1)                end,
-              {description = "select next", group = "layout"}),
-    awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(-1)                end,
-              {description = "select previous", group = "layout"}),
 
     awful.key({ modkey, "Control" }, "n",
               function ()
@@ -396,17 +396,18 @@ for i = 1, 9 do
                       end
                   end,
                   {description = "toggle tag #" .. i, group = "tag"}),
-        -- Move client to tag.
+        -- Move client to tag and view tag.
         awful.key({ modkey, "Shift" }, "#" .. i + 9,
                   function ()
                       if client.focus then
                           local tag = client.focus.screen.tags[i]
                           if tag then
                               client.focus:move_to_tag(tag)
+                              tag:view_only()
                           end
                      end
                   end,
-                  {description = "move focused client to tag #"..i, group = "tag"}),
+                  {description = "move focused client to tag # and view that tag"..i, group = "tag"}),
         -- Toggle tag on focused client.
         awful.key({ modkey, "Control", "Shift" }, "#" .. i + 9,
                   function ()
@@ -478,7 +479,7 @@ awful.rules.rules = {
         -- and the name shown there might not match defined rules here.
         name = {
           "Event Tester",  -- xev.
-          "alsamixer",
+          "pulsemixer",
         },
         role = {
           "AlarmWindow",  -- Thunderbird's calendar.
