@@ -488,9 +488,14 @@ awful.rules.rules = {
         }
       }, properties = { 
         floating = true,
-        placement = awful.placement.centered, 
           }
       },
+      -- Floating windows centered
+      { rule_any = { floating = true },
+        properties = {
+            placement = awful.placement.centered
+        }
+    },
 
     -- Fullscreen
     { rule_any = {
