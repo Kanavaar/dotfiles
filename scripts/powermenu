@@ -1,6 +1,6 @@
 #! /bin/sh
 
-CHOSEN=$(printf "Power Off\nRestart\nLock\nLogout" | rofi -dmenu)
+CHOSEN=$(printf "Power Off\nRestart\nLock\nLogout" | rofi -p "Powermenu" -dmenu)
 
 case $CHOSEN in
   "Power Off") shutdown now ;;
