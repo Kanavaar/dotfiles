@@ -1,0 +1,56 @@
+# Basic Settings
+set hidden true
+set ignorecase true
+
+# Custom function
+
+# Make directory
+cmd mkdir ${{
+  printf "Directory Name: "
+  read ans
+  mkdir $ans
+}}
+
+# New File
+cmd mkfile ${{
+  printf "File Name: "
+  read ans
+  touch $ans
+}}
+
+# Remove
+cmd rm ${{
+  rm -rf "$f"
+}}
+
+# Open
+cmd open_with ${{
+  printf "What application to open this file with: "
+  read ans
+  $ans "$f"
+}}
+
+# Archive bindings
+cmd unarchive ${{
+  case "$f" in
+      *.zip) unzip "$f" ;;
+      *.tar.gz) tar -xzvf "$f" ;;
+      *.tar.bz2) tar -xjvf "$f" ;;
+      *.tar) tar -xvf "$f" ;;
+      *) echo "Unsupported format" ;;
+  esac
+}}
+
+
+# Keybindings
+# unmap default
+map d
+map o
+map m
+# My keybinds
+map R reload
+map gc cd ~/.config
+map dd rm
+map o open_with
+map md mkdir
+map mf mkfile
