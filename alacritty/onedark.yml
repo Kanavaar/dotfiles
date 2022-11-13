@@ -1,0 +1,54 @@
+onedarker: &onedarker
+  colors:
+    # Default colors
+    primary:
+      background: '0x1c1f26'
+      foreground: '0xabb2bf'
+  
+    # Normal colors
+    normal:
+      black:   '0x2a2f3e'
+      red:     '0xe06c75'
+      green:   '0x98c379'
+      yellow:  '0xd7ba7d'
+      blue:    '0x61afef'
+      magenta: '0xd16d9e'
+      cyan:    '0x56b6c2'
+      white:   '0x5c6370'
+  
+    # Bright colors
+    bright:
+      black:   '0x5c6370'
+      red:     '0xe06c75'
+      green:   '0x98c379'
+      yellow:  '0xd7ba7d'
+      blue:    '0x61afef'
+      magenta: '0xd16d9e'
+      cyan:    '0x56b6c2'
+      white:   '0x5c6370'
+
+onedark: &onedark
+  colors:
+    primary:
+      background: '#1f2227'
+      foreground: '#D8DEE9'
+    normal:
+      black:   '#2d3139'
+      red:     '#BF616A'
+      green:   '#A3BE8C'
+      yellow:  '#d7ba7d'
+      blue:    '#5e81ac'
+      magenta: '#B48EAD'
+      cyan:    '#88C0D0'
+      white:   '#abb2bf'
+    bright:
+      black:   '#6c7689'
+      red:     '#af7370'
+      green:   '#b5cea8'
+      yellow:  '#e7cb93'
+      blue:    '#69bac8'
+      magenta: '#939ede'
+      cyan:    '#69BAC8'
+      white:   '#D8DEE9'
+
+colors: *onedark
