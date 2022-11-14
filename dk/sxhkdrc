@@ -21,11 +21,11 @@ super + shift + s
 	pamixer {-i,-d} 2
 
 # dedicated backlight keys
-{XF86MonBrightnessUp,XF86MonBrightnessDown}
+super + shift + {up,down}
 	xbacklight {+10,-10}
 
 # super volume keys
-super + {Insert,Delete}
+super + control + {up,down}
 	pamixer {-i,-d} 2
 
 # reload sxhkd

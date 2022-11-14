@@ -30,17 +30,17 @@ fi
 	dkcmd set ws=10 layout=grid pad left=200 right=200 top=100 bottom=100 gap width=50
 
 	# change workspace names (default: number == name)
-	# dkcmd set \
-	# 	ws=1  name="edit" \
-	# 	ws=2  name="web" \
-	# 	ws=3  name="😀" \
-	# 	ws=4  name="😠" \
-	# 	ws=5  name="5" \
-	# 	ws=6  name="6" \
-	# 	ws=7  name="7" \
-	# 	ws=8  name="8" \
-	# 	ws=9  name="9" \
-	# 	ws=10 name="10"
+ dkcmd set \
+ 	ws=1  name="α" \
+ 	ws=2  name="β" \
+ 	ws=3  name="γ" \
+ 	ws=4  name="δ" \
+ 	ws=5  name="ε" \
+ 	ws=6  name="ζ" \
+ 	ws=7  name="η" \
+ 	ws=8  name="θ" \
+ 	ws=9  name="ι" \
+ 	ws=10 name="κ"
 
 	# enable static workspaces and assign them to monitors (only relevant for multiple monitors)
 	# aside -
@@ -154,5 +154,8 @@ feh --bg-scale ~/pix/wallpaper/circuit_onedark.png
 
 # Picom
 picom --experimental-backends
+
+# Polybar
+launch-polybar
 
 exit 0
