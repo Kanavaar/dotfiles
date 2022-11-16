@@ -1,0 +1,68 @@
+#!/bin/sh
+
+exec feh --bg-scale ~/walls/circuit_onedark_no_logo.png
+exec /usr/bin/rpws init 9 -k
+exec wmname LG3D
+exec picom --experimental-backends
+
+set winname title
+set wingravity center
+set transgravity center
+set bargravity center
+set border 2
+set barborder 3
+set barpadding 1 1
+set font "Iosevka:pixelsize=12"
+set bgcolor #222222
+set fgcolor #f9f9f9
+set bwcolor #222222
+set fwcolor #458588
+
+
+escape Super_L
+
+bind t exec xterm
+bind s-b exec qutebrowser
+bind s-D exec rofi -show drun
+bind s-x exec powermenu
+bind s-S exec screenshot
+bind s-Return exec alacritty
+bind s-q delete
+bind s-Q only
+bind s-t time
+bind s-h focusleft
+bind s-j focusdown
+bind s-k focusup
+bind s-l focusright
+
+
+bind b exec qutebrowser
+bind D exec rofi -show drun
+bind x exec powermenu
+bind q kill
+bind h focusleft
+bind j focusdown
+bind k focusup
+bind l focusright
+
+
+# Change workspace bind s-1 exec rpws 1
+bind s-2 exec rpws 2
+bind s-3 exec rpws 3
+bind s-4 exec rpws 4
+bind s-5 exec rpws 5
+bind s-6 exec rpws 6
+bind s-7 exec rpws 7
+bind s-8 exec rpws 8
+bind s-9 exec rpws 9
+
+bind 1 exec rpws 1
+bind 2 exec rpws 2
+bind 3 exec rpws 3
+bind 4 exec rpws 4
+bind 5 exec rpws 5
+bind 6 exec rpws 6
+bind 7 exec rpws 7
+bind 8 exec rpws 8
+bind 9 exec rpws 9
+
