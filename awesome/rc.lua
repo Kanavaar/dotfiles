@@ -11,7 +11,7 @@ local wibox = require("wibox")
 -- Theme handling library
 local beautiful = require("beautiful")
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init(gears.filesystem.get_configuration_dir() .. "themes/edge.lua")
+beautiful.init(gears.filesystem.get_configuration_dir() .. "themes/onedark.lua")
 -- Notification library
 local naughty = require("naughty")
 local menubar = require("menubar")
@@ -169,7 +169,7 @@ awful.screen.connect_for_each_screen(function(s)
     set_wallpaper(s)
 
     -- Each screen has its own tag table.
-    awful.tag({ " 1 ", " 2 ", " 3 ", " 4 ", " 5 ", " 6 ", " 7 ", " 8 ", " 9 " }, s, awful.layout.layouts[1])
+    awful.tag({ " Ω ", " Ψ ", " Γ ", " Δ ", " Σ ", " Π ", " π ", " λ ", " Φ " }, s, awful.layout.layouts[1])
 
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
@@ -196,7 +196,7 @@ awful.screen.connect_for_each_screen(function(s)
 	style = {
 	    align = "left",
 	},
-	
+
     }
 
     -- Create the wibox
@@ -336,8 +336,22 @@ clientkeys = gears.table.join(
         {description = "toggle fullscreen", group = "client"}),
     awful.key({ modkey }, "q",      function (c) c:kill()                         end,
               {description = "close", group = "client"}),
-    awful.key({ modkey, "Control" }, "space",  awful.client.floating.toggle                     ,
-              {description = "toggle floating", group = "client"}),
+    --awful.key({ modkey, "Control" }, "space",  awful.client.floating.toggle                     ,
+    --         {description = "toggle floating", group = "client"}),
+    awful.key({modkey, "Control"}, "space", function(c) -- Center and raise floating windows if there is more than one
+  awful.client.floating.toggle(c)
+  local num_tiled_clients = 0
+  for _ in pairs(c.screen.tiled_clients) do num_tiled_clients = num_tiled_clients + 1 end
+  if num_tiled_clients >= 1 then
+    awful.placement.centered(c, nil)
+  end
+  c:raise()
+end,
+{
+  description = "Toggle floating",
+  group = "client"
+}
+),
     awful.key({ modkey, "Control" }, "Return", function (c) c:swap(awful.client.getmaster()) end,
               {description = "move to master", group = "client"}),
     awful.key({ modkey,           }, "o",      function (c) c:move_to_screen()               end,
@@ -452,7 +466,7 @@ awful.rules.rules = {
                      keys = clientkeys,
                      buttons = clientbuttons,
                      screen = awful.screen.preferred,
-                     placement = awful.placement.no_overlap+awful.placement.no_offscreen
+                     placement = awful.placement.centered+awful.placement.no_overlap+awful.placement.no_offscreen
      }
     },
 
@@ -486,12 +500,12 @@ awful.rules.rules = {
           "ConfigManager",  -- Thunderbird's about:config.
           "pop-up",       -- e.g. Google Chrome's (detached) Developer Tools.
         }
-      }, properties = { 
+      }, properties = {
         floating = true,
           }
       },
       -- Floating windows centered
-      { rule_any = { floating = true },
+      { rule_any = { floating == true },
         properties = {
             placement = awful.placement.centered
         }

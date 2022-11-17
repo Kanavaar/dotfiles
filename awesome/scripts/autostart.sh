@@ -1,1 +1,1 @@
-feh --bg-scale ~/wallpapers/gruv/stairs.jpg
+feh --bg-scale ~/walls/hands_onedark.png
