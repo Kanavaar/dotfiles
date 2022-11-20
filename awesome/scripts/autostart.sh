@@ -1,1 +1,2 @@
-feh --bg-scale ~/walls/hands_onedark.png
+feh --bg-scale ~/.config/wallpapers/hands_onedark.png
+picom &
