@@ -97,6 +97,8 @@ globalkeys = gears.table.join(
     	      {description = "decrease volume by 5", group = "sound"}),
     awful.key({ modkey }, "b", function () awful.spawn(browser) end,
     	      {description = "spawn browser", group = "launcher",}),
+    awful.key({ modkey }, "d", function () awful.spawn("discordcanary") end,
+    	      {description = "spawn discord", group  = "launcher"}),
 
 
     awful.key({ modkey, controlkey }, "n",
