@@ -11,7 +11,7 @@ local wibox = require("wibox")
 -- Theme handling library
 local beautiful = require("beautiful")
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init(gears.filesystem.get_configuration_dir() .. "themes/onedark.lua")
+beautiful.init(gears.filesystem.get_configuration_dir() .. "themes/theme.lua")
 -- Notification library
 local naughty = require("naughty")
 local menubar = require("menubar")
@@ -33,7 +33,7 @@ require("config.rules")
 require("config.layouts")
 
 -- Colors
-local colors = require("colors.palette")
+local colors = require("colors.nord")
 
 -- Widgets
 require("config.widgets")
@@ -200,7 +200,7 @@ awful.screen.connect_for_each_screen(function(s)
             s.mytaglist,
             s.mypromptbox,
         },
-        s.mytasklist, -- Middle widget
+        nil, -- s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
             wibox.widget.systray(),

@@ -7,7 +7,7 @@
 
 ## Import files (Colors, Fonts, Etc)
 import:
-  - ~/.config/alacritty/onedark.yml
+  - ~/.config/alacritty/colors/nord.yml
   - ~/.config/alacritty/font.yml
 
 ## Set environment variables
