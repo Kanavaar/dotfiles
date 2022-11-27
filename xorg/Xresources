@@ -1,4 +1,4 @@
-#include "./colors/nord"
+#include "./colors/onedark"
 *.font: Iosevka:size=10
 bold.font: Iosevka:style=bold
 italic.font: Iosevka=style=italic

@@ -1,0 +1,41 @@
+#define bg #1f2227
+#define fg #d8dee9
+#define onedark0 #2d3139
+#define onedark1 #BF616A
+#define onedark2 #A3BE8C
+#define onedark3 #d7ba7d
+#define onedark4 #5e81ac
+#define onedark5 #B48EAD
+#define onedark6 #88C0D0
+#define onedark7 #abb2bf
+#define onedark8 #6c7689
+#define onedark9 #af7370
+#define onedark10 #b5cea8
+#define onedark11 #e7cb93
+#define onedark12 #69bac8
+#define onedark13 #939ede
+#define onedark14 #69BAC8
+#define onedark15 #D8DEE9
+
+*.foreground:   fg
+*.background:   bg
+*.cursorColor:  fg
+*fading: 35
+*fadeColor: onedark1
+
+*.color0: onedark0 
+*.color1: onedark1 
+*.color2: onedark2 
+*.color3: onedark3 
+*.color4: onedark4 
+*.color5: onedark5 
+*.color6: onedark6 
+*.color7: onedark7 
+*.color8: onedark8 
+*.color9: onedark9 
+*.color10: onedark10 
+*.color11: onedark11 
+*.color12: onedark12 
+*.color13: onedark13 
+*.color14: onedark14 
+*.color15: onedark15 
