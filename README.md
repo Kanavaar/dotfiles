@@ -1,6 +1,10 @@
 # Dotfiles
 
 ## Config for awesome, alacritty, slock, (oh my) zsh and my scripts
+## **image go nord**
+```shell
+pip install image-go-nord
+```
 
 ## For awesome you need
 firefox lxappearce alacritty pulsemixer/alsamixer feh mpv Iosevka font neovim and my scripts
