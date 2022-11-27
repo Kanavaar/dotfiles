@@ -5,7 +5,9 @@ local menubar   = require "menubar"
 local wibox     = require "wibox"
 local naughty   = require "naughty"
 local key_popup = require "awful.hotkeys_popup"
-local colors    = require "colors.nord"
+local colors    = require "colors.onedark"
+local xresources = require("beautiful.xresources")
+local dpi = require("beautiful.xresources").apply_dpi
 
 require "config.variables"
 
@@ -25,3 +27,5 @@ mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesom
 
 mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
                                      menu = mymainmenu })
+
+
