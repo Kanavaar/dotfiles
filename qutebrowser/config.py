@@ -18,4 +18,4 @@ c.fonts.debug_console = '8pt JetBrains Mono Nerd Font'
 c.fonts.completion.entry = '8pt JetBrains Mono Nerd Font'
 c.fonts.completion.category = '8pt JetBrains Mono Nerd Font'
 
-c.colors.webpage.darkmode.enabled  = "true"
+c.colors.webpage.darkmode.enabled  = true
