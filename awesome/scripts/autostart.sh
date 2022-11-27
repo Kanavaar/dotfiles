@@ -1,3 +1,3 @@
 killall picom
-xwallpaper --maximize ~/Pictures/walls/wall/wall_sonokai.png
+xwallpaper --maximize ~/Pictures/walls/lol/lol_gruvbox.png
 picom &

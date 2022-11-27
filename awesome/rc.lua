@@ -34,8 +34,6 @@ require("config.rules")
 -- Layouts
 require("config.layouts")
 
--- Colors
-local colors = require("colors.gruvbox")
 
 -- Widgets
 require("config.widgets")
