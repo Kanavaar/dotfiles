@@ -7,7 +7,7 @@
 
 ## Import files (Colors, Fonts, Etc)
 import:
-  - ~/.config/alacritty/colors/nord.yml
+  - ~/.config/alacritty/colors/gruvbox.yml
   - ~/.config/alacritty/font.yml
 
 ## Set environment variables
@@ -27,7 +27,7 @@ window:
 
   decorations: full
   startup_mode: Windowed
-  dynamic_title: true
+  dynamic_title: false
 
 ## scrolling
   history: 10000

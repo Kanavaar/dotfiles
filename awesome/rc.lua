@@ -35,7 +35,7 @@ require("config.rules")
 require("config.layouts")
 
 -- Colors
-local colors = require("colors.onedark")
+local colors = require("colors.gruvbox")
 
 -- Widgets
 require("config.widgets")

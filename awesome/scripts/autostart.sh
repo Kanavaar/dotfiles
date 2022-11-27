@@ -1,3 +1,3 @@
 killall picom
-feh --bg-scale ~/Pictures/walls/office/office_nord.png
+xwallpaper --maximize ~/Pictures/walls/wall/wall_sonokai.png
 picom &
