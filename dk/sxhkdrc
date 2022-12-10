@@ -18,15 +18,15 @@ super + shift + s
 
 # dedicated volume keys
 {XF86AudioRaiseVolume,XF86AudioLowerVolume}
-	pamixer {-i,-d} 2
+	pamixer {-i,-d} 5
 
 # dedicated backlight keys
-super + shift + {up,down}
+super + shift + {Up,Down}
 	xbacklight {+10,-10}
 
 # super volume keys
-super + control + {up,down}
-	pamixer {-i,-d} 2
+super + control + {Up,Down}
+	pamixer {-i,-d} 5
 
 # reload sxhkd
 super + shift + x

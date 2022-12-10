@@ -20,27 +20,25 @@ fi
 	# ------------------------
 
 	# initialize 10 workspaces (1-10) (default: 1/monitor)
-	dkcmd set numws=10
+	dkcmd set numws=9
 
 	# default workspace '_' values used when allocating new workspaces
 	# can be applied to all existing workspaces when passed 'apply' after ws=_
-	dkcmd set ws=_ apply layout=tile master=1 stack=3 gap=0 msplit=0.5 ssplit=0.5
+	dkcmd set ws=_ apply layout=spiral master=1 stack=3 gap=0 msplit=0.5 ssplit=0.5
 
 	# use grid layout, padding, and gaps on workspace 10
-	dkcmd set ws=10 layout=grid pad left=200 right=200 top=100 bottom=100 gap width=50
 
 	# change workspace names (default: number == name)
  dkcmd set \
- 	ws=1  name="α" \
- 	ws=2  name="β" \
- 	ws=3  name="γ" \
- 	ws=4  name="δ" \
- 	ws=5  name="ε" \
- 	ws=6  name="ζ" \
- 	ws=7  name="η" \
- 	ws=8  name="θ" \
- 	ws=9  name="ι" \
- 	ws=10 name="κ"
+ 	ws=1  name="1" \
+ 	ws=2  name="2" \
+ 	ws=3  name="3" \
+ 	ws=4  name="4" \
+ 	ws=5  name="5" \
+ 	ws=6  name="6" \
+ 	ws=7  name="7" \
+ 	ws=8  name="8" \
+ 	ws=9  name="9"
 
 	# enable static workspaces and assign them to monitors (only relevant for multiple monitors)
 	# aside -
@@ -76,7 +74,7 @@ fi
 	dkcmd set win_minwh=50 win_minxy=10
 
 	# disable gaps and borders in single window layouts
-	dkcmd set smart_gap=true smart_border=true
+	dkcmd set smart_gap=true smart_border=false
 
 	# define mouse mod and move/resize buttons
 	dkcmd set mouse mod=alt move=button1 resize=button3
@@ -94,12 +92,12 @@ fi
 	# outer width must be less than width, outer width of 0 will be single borders
 	dkcmd set border width=5 outer_width=3 \
 		colour \
-		focus='#6699cc' \
-		unfocus='#444444' \
-		urgent='#ee5555' \
-		outer_focus='#222222' \
-		outer_unfocus='#222222' \
-		outer_urgent='#222222'
+		focus='#98971a' \
+		unfocus='#1d2021' \
+		urgent='#cc241d' \
+		outer_focus='#1d2021' \
+		outer_unfocus='#1d2021' \
+		outer_urgent='#1d2021'
 
 
 	# window rules
@@ -150,12 +148,12 @@ if grep -q 'error:' "$logfile"; then
 fi
 
 # Set wallpaper
-feh --bg-scale ~/pix/wallpaper/circuit_onedark.png
+xwallpaper --maximize /home/tilman/pix/walls/hase/hase_gruv.png
 
 # Picom
 picom --experimental-backends
 
 # Polybar
-launch-polybar
+exec /home/tilman/.config/polybar/launcher_dk.sh
 
 exit 0
