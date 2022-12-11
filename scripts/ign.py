@@ -1,13 +1,20 @@
+from ImageGoNord import NordPaletteFile, GoNord
+import sys
+
+input_file = sys.argv[1]
+output_file = sys.argv[2]
+
+
+
 def main():
-    from ImageGoNord import NordPaletteFile, GoNord
     
     go_nord = GoNord()
     
     go_nord.enable_avg_algorithm()
     go_nord.enable_gaussian_blur()
     
-    image = go_nord.open_image("/home/tilman/Pictures/walls/gefaengnis/gefaengnis.png")
-    go_nord.convert_image(image, save_path='/home/tilman/Pictures/walls/gefaengnis/gefaengnis_nord_blur.png')
+    image = go_nord.open_image(input_file)
+    go_nord.convert_image(image, save_path=output_file)
    
 if __name__=="__main__":
     main()
