@@ -8,6 +8,10 @@ super + p
 super + shift + d
 	rofi -show drun
 
+# Window switcher
+super + Tab
+  rofi -show window
+
 # terminal
 super + Return
 	alacritty
