@@ -5,7 +5,7 @@ local menubar   = require "menubar"
 local wibox     = require "wibox"
 local naughty   = require "naughty"
 local key_popup = require "awful.hotkeys_popup"
-local colors    = require "colors.onedark"
+local colors    = require "colors.gruvbox"
 local xresources = require("beautiful.xresources")
 local dpi = require("beautiful.xresources").apply_dpi
 
@@ -139,12 +139,10 @@ awful.screen.connect_for_each_screen(function(s)
     s.wibox = awful.wibar({
 	    position = "top",
 	    screen = s,
-	    width = s.geometry.width - beautiful.useless_gap * 4,
+	    width = s.geometry.width,
       height = dpi(30),
       bg = colors.bg,
     })
-
-    s.wibox.y = beautiful.useless_gap
 
     -- Add widgets to the wibox
     s.wibox:setup {

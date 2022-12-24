@@ -20,22 +20,22 @@ theme.bg_normal     = colors.bg
 theme.bg_focus      = colors.bg
 theme.bg_urgent     = colors.bg
 theme.bg_minimize   = colors.bg
-theme.bg_systray    = colors.bg 
+theme.bg_systray    = colors.bg
 
 theme.fg_normal     = colors.fg
 theme.fg_focus      = colors.fg
 theme.fg_urgent     = colors.red
 theme.fg_minimize   = colors.lightgrey
 
-theme.useless_gap   = dpi(5)
+theme.useless_gap   = dpi(1)
 theme.border_width  = dpi(2)
-theme.border_normal = colors.red
+theme.border_normal = colors.bg
 theme.border_focus  = colors.green
 theme.border_marked = colors.bg
 
-theme.taglist_fg_focus = colors.bg
-theme.taglist_bg_focus = colors.darkgrey
-theme.taglist_fg_empty = colors.darkgrey
+theme.taglist_fg_focus = colors.fg
+theme.taglist_bg_focus = colors.green
+theme.taglist_fg_empty = colors.lightgrey
 theme.taglist_fg_occupied = colors.fg
 
 -- There are other variable sets

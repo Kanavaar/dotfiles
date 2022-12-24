@@ -1,6 +1,4 @@
 -- Awesome Config | Keybinds
-
-
 local awful = require "awful"
 local gears = require "gears"
 local menubar = require "menubar"
@@ -87,8 +85,10 @@ globalkeys = gears.table.join(
               {description = "reload awesome", group = "awesome"}),
     awful.key({ modkey, shiftkey   }, "q", awesome.quit,
               {description = "quit awesome", group = "awesome"}),
-    awful.key({ modkey, shiftkey }, "s", function () awful.spawn.with_shell("~/.config/scripts/screenshot") end,
+    awful.key({ modkey, shiftkey }, "s", function () awful.spawn.with_shell("~/.config/scripts/screenshot select") end,
               {description = "select area of screenshot", group = "screenshot"}),
+    awful.key({ modkey, controlkey }, "s", function () awful.spawn.with_shell("~/.config/scripts/screenshot window") end,
+              {description = "screenshot active window", group = "screenshot"}),
     awful.key({ modkey }, "v", function () awful.spawn(terminal .. " -t pulsemixer -e pulsemixer") end,
               {description = "spawn pulsemixer", group = "sound"}),
     awful.key({ modkey, controlkey }, "Up", function () awful.spawn.with_shell("pamixer -i 5") end,
