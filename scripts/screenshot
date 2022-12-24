@@ -1,11 +1,8 @@
 #! /bin/sh
 
-OUTPUT=$HOME/pictures/screenshots/%Y_%m_%d_%T-screenshot.png
+OUTPUT=$HOME/pix/screenshots/%Y_%m_%d_%T-screenshot.png
 
-OPTIONS=$(printf "full\nselect\nwindow" | rofi -dmenu -p "screenshot" -lines 3)
-
-case $OPTIONS in
-  "full") scrot "$OUTPUT" || exit ;;
+case $1 in
   "select") scrot "$OUTPUT" --select --line mode=edge || exit ;;
   "window") scrot "$OUTPUT" --focused --border || exit ;;
   *) exit 1 ;;
