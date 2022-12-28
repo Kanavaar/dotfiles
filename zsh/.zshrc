@@ -2,13 +2,13 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="$HOME/.config/oh_my_zsh"
+# export ZSH="$HOME/.config/oh_my_zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+# ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -70,9 +70,9 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
-
-source $ZSH/oh-my-zsh.sh
+# plugins=(git)
+# 
+# source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -104,6 +104,21 @@ fi
 # ls aliases
 alias ls='exa -la --group-directories-first'
 
+# git
+alias gcl='git clone'
+alias gca='git add . && git commit'
+alias gcm='git commit'
+alias gad='git add'
+alias gpl='git pull'
+alias gp='git push'
+
+# nvim
+v='nvim'
+
 # exit alias
 #
 alias :q='exit'
+
+
+# Starship
+eval "$(starship init zsh)"
