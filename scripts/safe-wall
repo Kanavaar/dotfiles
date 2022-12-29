@@ -1,0 +1,3 @@
+#!/bin/sh
+#
+xwallpaper --zoom ~/pix/walls/abstract.png

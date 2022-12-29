@@ -65,14 +65,8 @@ globalkeys = gears.table.join(
               {description = "focus the previous screen", group = "screen"}),
     awful.key({ modkey,           }, "u", awful.client.urgent.jumpto,
               {description = "jump to urgent client", group = "client"}),
-    awful.key({ modkey,           }, "Tab",
-        function ()
-            awful.client.focus.history.previous()
-            if client.focus then
-                client.focus:raise()
-            end
-        end,
-        {description = "go back", group = "client"}),
+    awful.key({ modkey,           }, "Tab", function () awful.spawn("rofi -show window") end,
+        {description = "change active window", group = "client"}),
     awful.key({ modkey,           }, "space", function () awful.layout.inc( 1)                end,
               {description = "select next", group = "layout"}),
     awful.key({ modkey, shiftkey   }, "space", function () awful.layout.inc(-1)                end,
@@ -95,9 +89,9 @@ globalkeys = gears.table.join(
               {description = "spawn pavucontrol", group = "sound"}),
     awful.key({ modkey, shiftkey }, "v", function () awful.spawn("get-volume") end,
               {description = "get current volume in notification", group = "sound"}),
-    awful.key({ modkey, controlkey }, "Up", function () awful.spawn.with_shell("pamixer -i 5") end,
+    awful.key({ modkey, controlkey }, "Up", function () awful.spawn.with_shell("change-volume up") end,
     	      {description = "increase volume by 5", group = "sound"}),
-    awful.key({ modkey, controlkey }, "Down", function () awful.spawn.with_shell("pamixer -d 5") end,
+    awful.key({ modkey, controlkey }, "Down", function () awful.spawn.with_shell("change-volume down") end,
     	      {description = "decrease volume by 5", group = "sound"}),
     awful.key({ modkey }, "b", function () awful.spawn(browser) end,
     	      {description = "spawn browser", group = "launcher",}),
