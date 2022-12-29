@@ -91,14 +91,20 @@ globalkeys = gears.table.join(
               {description = "screenshot active window", group = "screenshot"}),
     awful.key({ modkey }, "v", function () awful.spawn(terminal .. " -t pulsemixer -e pulsemixer") end,
               {description = "spawn pulsemixer", group = "sound"}),
+    awful.key({ modkey, controlkey }, "v", function () awful.spawn("pavucontrol") end,
+              {description = "spawn pavucontrol", group = "sound"}),
+    awful.key({ modkey, shiftkey }, "v", function () awful.spawn("get-volume") end,
+              {description = "get current volume in notification", group = "sound"}),
     awful.key({ modkey, controlkey }, "Up", function () awful.spawn.with_shell("pamixer -i 5") end,
     	      {description = "increase volume by 5", group = "sound"}),
     awful.key({ modkey, controlkey }, "Down", function () awful.spawn.with_shell("pamixer -d 5") end,
     	      {description = "decrease volume by 5", group = "sound"}),
     awful.key({ modkey }, "b", function () awful.spawn(browser) end,
     	      {description = "spawn browser", group = "launcher",}),
-    awful.key({ modkey }, "d", function () awful.spawn("discordcanary") end,
+    awful.key({ modkey }, "d", function () awful.spawn("discord") end,
     	      {description = "spawn discord", group  = "launcher"}),
+    awful.key({ modkey }, "t", function () awful.spawn.with_shell("get-time-date") end,
+    	      {description = "Show time and date", group  = "system"}),
 
 
     awful.key({ modkey, controlkey }, "n",
@@ -193,6 +199,7 @@ for i = 1, 9 do
                   function ()
                         local screen = awful.screen.focused()
                         local tag = screen.tags[i]
+                        awful.spawn.with_shell(string.format("workspace-notify %d", i))
                         if tag then
                            tag:view_only()
                         end
@@ -212,7 +219,8 @@ for i = 1, 9 do
         awful.key({ modkey, shiftkey }, "#" .. i + 9,
                   function ()
                       if client.focus then
-                          local tag = client.focus.screen.tags[i]
+                        local tag = client.focus.screen.tags[i]
+                        awful.spawn.with_shell(string.format("workspace-notify %d", i))
                           if tag then
                               client.focus:move_to_tag(tag)
                               tag:view_only()

@@ -4,7 +4,6 @@
 local awful = require "awful"
 local gears = require "gears"
 local pretty = require "beautiful"
-local naughty = require "naughty"
 local menubar = require "menubar"
 
 modkey = "Mod4"
