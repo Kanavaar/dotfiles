@@ -5,15 +5,15 @@ config.load_autoconfig()
 c.url.start_pages = ["https://www.wttr.in/"]
 c.url.searchengines = {"DEFAULT": "https://searx.org/search?q={}"}
 
-c.fonts.tabs.selected = '8pt JetBrains Mono Nerd Font'
-c.fonts.tabs.unselected = '8pt JetBrains Mono Nerd Font'
-c.fonts.hints = '8pt JetBrains Mono Nerd Font'
-c.fonts.keyhint = '8pt JetBrains Mono Nerd Font'
-c.fonts.prompts = '8pt JetBrains Mono Nerd Font'
-c.fonts.downloads = '8pt JetBrains Mono Nerd Font'
-c.fonts.statusbar = '8pt JetBrains Mono Nerd Font'
-c.fonts.contextmenu = '8pt JetBrains Mono Nerd Font'
-c.fonts.messages.info = '8pt JetBrains Mono Nerd Font'
-c.fonts.debug_console = '8pt JetBrains Mono Nerd Font'
-c.fonts.completion.entry = '8pt JetBrains Mono Nerd Font'
+c.fonts.tabs.selected = '8pt Iosevka'
+c.fonts.tabs.unselected = '8pt Iosevka'
+c.fonts.hints = '8pt Iosevka'
+c.fonts.keyhint = '8pt Iosevka'
+c.fonts.prompts = '8pt Iosevka'
+c.fonts.downloads = '8pt Iosevka'
+c.fonts.statusbar = '8pt Iosevka'
+c.fonts.contextmenu = '8pt Iosevka'
+c.fonts.messages.info = '8pt Iosevka'
+c.fonts.debug_console = '8pt Iosevka'
+c.fonts.completion.entry = '8pt Iosevka'
 
