@@ -7,7 +7,7 @@
 
 ## Import files (Colors, Fonts, Etc)
 import:
-  - ~/.config/alacritty/colors/gruvbox.yml
+  - ~/.config/alacritty/colors/vscode.yml
   - ~/.config/alacritty/font.yml
 
 ## Set environment variables
