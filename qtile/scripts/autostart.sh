@@ -11,7 +11,7 @@ function run {
 }
 
 #start sxhkd to replace Qtile native key-bindings
-run sxhkd -c ~/.config/qtile/sxhkd/sxhkdrc &
+run sxhkd &
 
 xrandr --output DP-0 --mode 1920x1080 --rate 144
 #start mpd

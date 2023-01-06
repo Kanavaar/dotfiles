@@ -1,0 +1,56 @@
+super + Escape
+    pkill -USR1 -x sxhkd
+
+super + Return
+  alacritty
+
+#Rofi & dmenu
+
+super + shift + d
+    rofi -show drun
+
+super + x
+    powermenu
+
+# Stuff I need
+super + t
+  get-time-date
+
+
+# Application Keybindings
+
+super + s
+  spotify
+
+super + b
+    qutebrowser
+
+super + d 
+ discord
+
+super + shift + s
+    screenshot select
+
+super + ctrl + s
+    screenshot select
+
+#Audio Keybindings
+
+super + space
+  playerctl play-pause
+
+super + shift + v
+  get-volume
+
+super + ctrl + Up
+  change-volume up
+
+super + ctrl + Down
+  change-volume down
+
+super + ctrl + Left
+  playerctl previous
+
+super + ctrl + Right
+  playerctl next
+
