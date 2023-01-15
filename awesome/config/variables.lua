@@ -11,7 +11,7 @@ altkey = "Mod1"
 shiftkey = "Shift"
 controlkey = "Control"
 
-terminal = "alacritty" or "xterm"
+terminal = "alacritty" or "st" or "xterm"
 editor   = "nvim"       or "vim"       or "nano"
 browser  = "qutebrowser" or "firefox"
 launcher = "rofi -show drun" or "dmenu_run"

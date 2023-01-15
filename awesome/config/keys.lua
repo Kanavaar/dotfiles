@@ -67,10 +67,10 @@ globalkeys = gears.table.join(
               {description = "jump to urgent client", group = "client"}),
     awful.key({ modkey,           }, "Tab", function () awful.spawn("rofi -show window") end,
         {description = "change active window", group = "client"}),
-    awful.key({ modkey,           }, "space", function () awful.layout.inc( 1)                end,
-              {description = "select next", group = "layout"}),
-    awful.key({ modkey, shiftkey   }, "space", function () awful.layout.inc(-1)                end,
-              {description = "select previous", group = "layout"}),
+    -- awful.key({ modkey,           }, "space", function () awful.layout.inc( 1)                end,
+    --           {description = "select next", group = "layout"}),
+    -- awful.key({ modkey, shiftkey   }, "space", function () awful.layout.inc(-1)                end,
+    --           {description = "select previous", group = "layout"}),
 
     -- Standard program
     awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end,
@@ -118,7 +118,7 @@ globalkeys = gears.table.join(
               {description = "run prompt", group = "launcher"}),
 
     awful.key({ modkey }, "x",
-              function () awful.spawn.with_shell("~/.config/scripts/powermenu") end,
+              function () awful.spawn.with_shell("powermenu") end,
               {description = "lua execute powermenu", group = "system"}),
     -- Menubar
     awful.key({ modkey }, "p", function() menubar.show() end,

@@ -82,7 +82,10 @@ awful.rules.rules = {
     },
 
     -- Set Discord to always map on the tag named 9  on screen 1.
-     { rule = { class = "discord" },
-       properties = { screen = 1, tag = " 5 ", floating = true, placement = awful.placement.centered } },
+     { rule_any = { class = {
+        "discord",
+        "spotify,"
+     }},
+       properties = { screen = 1, tag = " 5 ", floating = false, placement = awful.placement.centered } },
 }
 -- }}}
