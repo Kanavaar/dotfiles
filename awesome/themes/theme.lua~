@@ -8,7 +8,7 @@ local dpi = xresources.apply_dpi
 
 local gfs = require("gears.filesystem")
 local themes_path = gfs.get_themes_dir()
-local colors = require("colors.kanagawa")
+local colors = require("colors.gruvbox")
 
 local theme = {}
 
@@ -35,7 +35,7 @@ theme.border_marked = colors.bg
 
 theme.taglist_fg_focus = colors.fg
 theme.taglist_bg_focus = colors.green
-theme.taglist_fg_empty = colors.darkgrey
+theme.taglist_fg_empty = colors.lightgrey
 theme.taglist_fg_occupied = colors.fg
 
 -- There are other variable sets
