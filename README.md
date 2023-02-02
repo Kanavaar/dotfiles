@@ -20,3 +20,6 @@ Papirus icons theme, fluent dark
 
 ## zsh
 [oh-my-zsh](https://ohmyz.sh) and exa instead of ls
+
+## Hyprland dependencies
+[fuzzel](https://codeberg.org/dnkl/fuzzel), [foot](https://codeberg.org/dnkl/foot), [swww](https://github.com/Horus645/swww) (for wallpaper)
