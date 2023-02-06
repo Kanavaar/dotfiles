@@ -1,3 +1,0 @@
-#!/bin/sh
-
-dunstify "Time and date:" "$(date +"%a, %d.%m.%y, %H:%M")" -r 18769

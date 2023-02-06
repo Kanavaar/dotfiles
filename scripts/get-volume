@@ -1,3 +1,0 @@
-#!/bin/sh
-#
-dunstify -r 42069 "Current Volume" "$(pamixer --get-volume)"

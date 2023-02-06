@@ -1,3 +1,0 @@
-#!/bin/sh
-#
-xfconf-query -c xfce4-desktop -p  /backdrop/screen0/monitorDP-0/workspace0/last-image -s ~/pix/walls/abstract.png
