@@ -1,0 +1,2 @@
+#!/bin/sh
+hyprctl activewindow | perl -ne 'm/class: (.*)/ && print "$1\n"' | cut -c 1-95

@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# Kill stuff to not start twice
+killall dunst
+eww kill
+swww kill
+
+# set wallpaper
+swww init
+safe-wall-wayland
+
+# Notifications
+dunst &
+
+# Eww
+eww open bar

@@ -1,0 +1,5 @@
+#/bin/sh
+
+RAM=$(free -h | grep -i mem | awk '{print $3}')
+
+echo $RAM

@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# set wallpaper
+swww init
+swww img ~/pix/walls/le-malin-azur-lane.png
+
+# Notifications
+dunst &
+
+# Waybar
+waybar &
