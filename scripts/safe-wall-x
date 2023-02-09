@@ -1,0 +1,3 @@
+#!/bin/sh
+
+feh --bg-scale ~/dotfiles/walls/write-lambda-code-inverted.png

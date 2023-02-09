@@ -1,0 +1,8 @@
+#!/bin/sh
+
+export NVOID_RUNTIME_DIR="${NVOID_RUNTIME_DIR:-"/home/tilman/.local/share/nvoid"}"
+export NVOID_BASE16_DIR="${NVOID_BASE16_DIR:-"/home/tilman/.local/share/nvoid/site/pack/packer/start/base16/lua/base16/highlight"}"
+export NVOID_CONFIG_DIR="${NVOID_CONFIG_DIR:-"/home/tilman/.config/nvoid"}"
+export NVOID_CACHE_DIR="${NVOID_CACHE_DIR:-"/home/tilman/.cache/nvoid"}"
+
+exec nvim -u "$NVOID_RUNTIME_DIR/nvoid/init.lua" "$@"

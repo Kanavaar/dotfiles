@@ -1,0 +1,11 @@
+#! /bin/sh
+
+CHOSEN=$(printf "Power Off\nRestart\nLock\nLogout" | rofi -p "Powermenu" -dmenu)
+
+case $CHOSEN in
+  "Power Off") sudo shutdown now ;;
+  "Restart") sudo reboot now ;;
+  "Lock") slock ;;
+  "Logout") loginctl terminate-user $USER ;;
+  *) exit 1 ;;
+esac

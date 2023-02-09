@@ -1,0 +1,8 @@
+#!/bin/sh
+#
+workspace=$1
+
+dunstify "Workspace" $workspace -r 69420
+
+
+
