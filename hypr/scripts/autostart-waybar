@@ -1,11 +1,14 @@
 #!/bin/sh
 
 # set wallpaper
+sww kill
 swww init
 swww img ~/pix/walls/le-malin-azur-lane.png
 
 # Notifications
+killall dunst
 dunst &
 
 # Waybar
+killall waybar
 waybar &
