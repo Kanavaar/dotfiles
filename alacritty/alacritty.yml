@@ -7,7 +7,7 @@
 
 ## Import files (Colors, Fonts, Etc)
 import:
-  - ~/.config/alacritty/colors/decay.yml
+  - ~/.config/alacritty/colors/tomorrow-day.yml
   - ~/.config/alacritty/font.yml
 
 ## Set environment variables
