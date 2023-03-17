@@ -1,14 +1,11 @@
 #! /bin/sh
 
 # Sxhkd
-pgrep -x sxhkd > /dev/null || sxhkd -c /home/tilman/.config/bspwm/sxhkdrc &
-
-# Wallpaper
-# xwallpaper --maximize ~/pix/walls/ketten/ketten_nord.png & 
-feh -r --bg-scale --randomize ~/.config/walls/*
+pgrep -x sxhkd > /dev/null # || sxhkd -c ~/.config/bspwm/sxhkdrc &
+sxhkd &
 
 # Bar
-# exec /home/tilman/.config/polybar/launcher_bspwm.sh &
+exec /home/tilman/.config/polybar/launcher_bspwm.sh &
 
 # Picom
 picom &
@@ -27,3 +24,7 @@ bspc rule -a Chromium desktop='^2'
 bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
+
+# Wallpaper
+betterlockscreen -u ~/.config/walls/ --fx none
+betterlockscreen -w
