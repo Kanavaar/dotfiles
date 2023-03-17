@@ -2,6 +2,8 @@ killall picom
 killall dunst
 killall sxhkd
 feh -r --bg-scale --randomize ~/.config/walls/*
+betterlockscreen -u ~/.config/walls/ --fx none
+betterlockscreen -w
 picom &
 dunst &
 sxhkd &
