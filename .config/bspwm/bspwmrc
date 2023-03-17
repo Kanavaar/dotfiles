@@ -4,10 +4,11 @@
 pgrep -x sxhkd > /dev/null || sxhkd -c /home/tilman/.config/bspwm/sxhkdrc &
 
 # Wallpaper
-xwallpaper --maximize ~/pix/walls/ketten/ketten_nord.png & 
+# xwallpaper --maximize ~/pix/walls/ketten/ketten_nord.png & 
+feh -r --bg-scale --randomize ~/.config/walls/*
 
 # Bar
-exec /home/tilman/.config/polybar/launcher_bspwm.sh &
+# exec /home/tilman/.config/polybar/launcher_bspwm.sh &
 
 # Picom
 picom &
