@@ -3,7 +3,7 @@ local font= require("cfg.font")
 
 return {
   font = wezterm.font(font),
-  color_scheme = "Gruvbox Light",
+  color_scheme = "Oxocarbon Dark",
   window_padding = {
     top = 0,
     bottom = 0,
