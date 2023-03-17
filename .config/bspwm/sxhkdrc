@@ -4,7 +4,7 @@
 
 # terminal emulator
 super + Return
-	alacritty
+	wezterm
 
 # program launcher
 super + @space
@@ -19,11 +19,14 @@ super + Escape
 
 # Screenshot
 super + shift + s
-  screenshot
+  ~/.local/bin/screenshot
 
 # Powermenu
 super + x
-  powermenu
+  ~/.local/bin/powermenu
+
+super + b
+  qutebrowser
 
 #
 # bspwm hotkeys
