@@ -1,8 +1,7 @@
 killall picom
 killall dunst
 killall sxhkd
-# xwallpaper --maximize ~/pix/wallhaven-q29d2l_1920x1080_gruv.png
-feh -r --bg-scale --randomize ~/pix/walls/*
+feh -r --bg-scale --randomize ~/.config/walls/*
 picom &
 dunst &
 sxhkd &

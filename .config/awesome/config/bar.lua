@@ -5,7 +5,7 @@ local menubar   = require "menubar"
 local wibox     = require "wibox"
 local naughty   = require "naughty"
 local key_popup = require "awful.hotkeys_popup"
-local colors    = require "colors.kanagawa"
+local colors    = require "colors"
 local xresources = require("beautiful.xresources")
 local dpi = require("beautiful.xresources").apply_dpi
 
