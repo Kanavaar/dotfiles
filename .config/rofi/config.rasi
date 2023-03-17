@@ -4,7 +4,7 @@ configuration{
     font: "Iosevka 12";
     show-icons: true;
     icon-theme: "Papirus-Dark";
-    terminal: "st";
+    terminal: "wezterm";
     drun-display-format: "{icon} {name}";
     location: 0;
     disable-history: false;
