@@ -1,6 +1,7 @@
 # Basic Settings
 set hidden true
 set ignorecase true
+set drawbow true
 
 # Custom function
 
