@@ -2,9 +2,9 @@
 #
 if [[ $1 == "up" ]]; then
   pamixer -i 5
-  get-volume
+  ~/.local/bin/get-volume
 elif [[ $1 == "down" ]]; then
   pamixer -d 5
-  get-volume
+  ~/.local/bin/get-volume
 fi
   

@@ -7,7 +7,7 @@ super + Return
 	wezterm
 
 # program launcher
-super + @space
+super + shift + @space
 	dmenu_run
 
 super + shift + d
@@ -24,9 +24,6 @@ super + shift + s
 # Powermenu
 super + x
   ~/.local/bin/powermenu
-
-super + b
-  qutebrowser
 
 #
 # bspwm hotkeys
@@ -57,7 +54,7 @@ super + control + Return
 #
 
 # set the window state
-super + {t,shift + t,s,f}
+super + {shift + t, ctrl + t,ctrl + space,f}
 	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
 # set the node flags
@@ -133,3 +130,42 @@ super + alt + shift + {h,j,k,l}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+
+# Application Keybindings
+
+super + b
+  qutebrowser
+
+super + s
+  spotify
+
+super + d 
+ discord
+
+super + t
+  ~/.local/bin/get-time-date
+
+#Audio Keybindings
+
+super + v
+  wezterm start --class pulsemixer pulsemixer
+
+super + space
+  playerctl play-pause
+
+super + shift + v
+  ~/.local/bin/get-volume
+
+super + ctrl + Up
+  ~/.local/bin/change-volume up
+
+super + ctrl + Down
+  ~/.local/bin/change-volume down
+
+super + ctrl + Left
+  previous
+
+super + ctrl + Right
+  playerctl next
+
