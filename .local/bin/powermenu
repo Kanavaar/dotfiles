@@ -3,8 +3,8 @@
 CHOSEN=$(printf "Power Off\nRestart\nLock\nLogout" | rofi -p "Powermenu" -dmenu)
 
 case $CHOSEN in
-  "Power Off") sudo shutdown now ;;
-  "Restart") sudo reboot now ;;
+  "Power Off") systemctl poweroff ;;
+  "Restart") systemctl reboot ;;
   "Lock") betterlockscreen -l;;
   "Logout") loginctl terminate-user $USER ;;
   *) exit 1 ;;
