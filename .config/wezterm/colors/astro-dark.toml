@@ -1,0 +1,59 @@
+[colors]
+background = '#1e222a'
+foreground = '#abb2bf'
+cursor_bg = '#abb2bf'
+cursor_border = '#abb2bf'
+cursor_fg = '#1e222a'
+
+ansi = [
+    '#282c34',
+    '#e06c75',
+    '#98c379',
+    '#e5c06b',
+    '#5f819d',
+    '#c678dd',
+    '#56b6c2',
+    '#2c323c',
+]
+brights = [
+    '#4b5263',
+    '#ec5f67',
+    '#89b06d',
+    '#ebae34',
+    '#90c7f3',
+    '#a9a1e1',
+    '#88cbd4',
+    '#abb2bf',
+]
+
+[colors.tab_bar]
+background = "#1e222a"
+
+[colors.tab_bar.active_tab]
+bg_color = '#1e222a'
+fg_color = '#abb2bf'
+intensity = 'Normal'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.inactive_tab]
+bg_color = '#282c34'
+fg_color = '#abb2bf'
+intensity = 'Normal'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.new_tab]
+bg_color = '#282c34'
+fg_color = '#abb2bf'
+intensity = 'Normal'
+italic = false
+strikethrough = false
+underline = 'None'
+
+
+[metadata]
+name = 'Astro Theme Dark'
+origin_url = 'https://github.com/astronvim/astrotheme'
