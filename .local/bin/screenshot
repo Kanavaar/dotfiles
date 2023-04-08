@@ -2,7 +2,7 @@
 
 OUTPUT=$HOME/pictures/screenshots/%Y_%m_%d_%T-screenshot.png
 
-OPTIONS=$(printf "full\nselect\nwindow" | rofi -dmenu -p "screenshot" -lines 3)
+OPTIONS=$(printf "full\nselect\nwindow" | rofi -dmenu -i -p "screenshot" -lines 3)
 
 case $OPTIONS in
   "full") scrot -d 1 "$OUTPUT" || exit ;;

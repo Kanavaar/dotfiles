@@ -1,6 +1,6 @@
 #! /bin/sh
 
-CHOSEN=$(printf "Power Off\nRestart\nLock\nLogout" | rofi -p "Powermenu" -dmenu)
+CHOSEN=$(printf "Power Off\nRestart\nLock\nLogout" | rofi -p "Powermenu" -dmenu -i)
 
 case $CHOSEN in
   "Power Off") sudo shutdown now ;;
