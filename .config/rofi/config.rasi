@@ -7,6 +7,7 @@ configuration {
   drun-display-format: "{icon} {name}";
   display-drun: "   Apps ";
   show-icons: true;
+  case-sensitive: false;
 
   /* Vim-esque C-j/C-k as up/down in rofi */
   kb-accept-entry: "Return,Control+m,KP_Enter";
