@@ -14,4 +14,5 @@ return {
   enable_tab_bar = false,
   enable_wayland = true,
   enable_scroll_bar = false,
+  window_close_confirmation = "NeverPrompt",
 }
