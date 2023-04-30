@@ -17,18 +17,18 @@ configuration {
 }
 
 * {
-  accent:   #bd93f9;
-  bg:       #1E2029FA;
-  bg-light: #1c1c1c;
-  bg-focus: #282a36;
-  bg-dark:  #181a23;
-  fg:       #bbc2cf;
-  fg-list:  #bbc2cf;
-  on:       #8BD49C;
-  off:      #cc6666;
+  accent:   #b16286;
+  bg:       #282828;
+  bg-light: #3c3836;
+  bg-focus: #282828;
+  bg-dark:  #1d2021;
+  fg:       #ebdbb2;
+  fg-list:  #ebdbb2;
+  on:       #689d6a;
+  off:      #cc241d;
 
-  magenta: #bd93f9;
-  blue:    #61bfff;
+  magenta: #b16186;
+  blue:    #458588;
 
   text-font:      "Overpass Nerd Font 15";
   text-mono-font: "CaskaydiaCove Nerd Font 13";
@@ -118,7 +118,7 @@ prompt, entry {
   background-color: @bg-focus;
 }
 textbox-icon, prompt {
-  background-color: #2f313d;
+  background-color: #282828;
 }
 prompt {
   background-color: @bg-focus;
