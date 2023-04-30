@@ -157,11 +157,11 @@ super + space
 super + shift + v
   ~/.local/bin/get-volume
 
-super + ctrl + Up
-  ~/.local/bin/change-volume up
+super + ctrl + {Up,Down}
+  ~/.local/bin/change-volume {up,down}
 
-super + ctrl + Down
-  ~/.local/bin/change-volume down
+super + ctrl + {XF86AudioRaiseVolume,XF86AusioLowerVolume}
+  ~/.local/bin/change-volume {up,down}
 
 super + ctrl + Left
   previous

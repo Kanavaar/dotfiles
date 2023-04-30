@@ -1,0 +1,32 @@
+[colors]
+background = "#171717"
+# foreground = '#abb2bf'
+foreground = 'C5C8C6'
+cursor_bg = '#abb2bf'
+cursor_border = '#abb2bf'
+cursor_fg = '#171717'
+
+ansi = [
+    "#4B4B4B",
+    "#FE5F86",
+    "#00D787",
+    "#EBFF71",
+    "#8F69FF",
+    "#FF7AEA",
+    "#00FEFE",
+    "#FFFFFF",
+]
+brights = [
+    "#282a2e",
+    "#D74E6F",
+    "#31BB71",
+    "#8056FF",
+    "#D3E561",
+    "#ED61D7",
+    "#04D7D7",
+    "#C5C8C6",
+]
+
+[metadata]
+name = 'maaslalani'
+origin_url = 'https://github.com/maaslalani/_/blob/main/modules/colors.nix'

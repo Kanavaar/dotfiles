@@ -3,7 +3,8 @@ local font= require("cfg.font")
 
 return {
   font = wezterm.font(font),
-  color_scheme = "Neodark",
+  color_scheme = "GruvboxDark",
+  -- color_scheme = "Catppuccin Mocha",
   window_padding = {
     top = 0,
     bottom = 0,
