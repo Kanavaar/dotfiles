@@ -146,12 +146,15 @@ super + d
 super + t
   ~/.local/bin/get-time-date
 
-#Audio Keybindings
+# Audio Keybindings
 
 super + v
   wezterm start --class pulsemixer pulsemixer
 
 super + space
+  playerctl play-pause
+
+XF86AudioPlay
   playerctl play-pause
 
 super + shift + v
@@ -160,11 +163,11 @@ super + shift + v
 super + ctrl + {Up,Down}
   ~/.local/bin/change-volume {up,down}
 
-super + ctrl + {XF86AudioRaiseVolume,XF86AusioLowerVolume}
+{XF86AudioRaiseVolume,XF86AudioLowerVolume}
   ~/.local/bin/change-volume {up,down}
 
 super + ctrl + Left
-  previous
+  playerctl previous
 
 super + ctrl + Right
   playerctl next
