@@ -30,7 +30,7 @@ bspc rule -a pulsemixer state=floating
 bspc rule -a mpv state=fullscreen
 
 # Wallpaper
-betterlockscreen -u ~/.config/walls/ --fx none
+betterlockscreen -u ~/.config/walls/plane.png --fx none
 betterlockscreen -w
 
 # Caffeine
