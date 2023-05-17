@@ -4,8 +4,26 @@ theme = "gruvbox"
 line-number = "relative"
 mouse = false
 bufferline = "multiple"
+
 [editor.cursor-shape]
 insert = "bar"
+
+[editor.indent-guides]
+render = true
+character = "|"
+skip-levels = 0
+
+[editor.statusline]
+left = ["mode", "spacer", "position", "spacer", "spinner"]
+center = []
+right = ["diagnostics", "spacer", "selections", "spacer", "file-encoding", "file-line-ending", "file-type"]
+separator = "|"
+
+[editor.statusline.mode]
+insert = "<I>"
+normal = "<N>"
+select = "<V>"
+
 
 [keys.normal]
 esc = ["collapse_selection", "keep_primary_selection"]
