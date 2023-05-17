@@ -1,4 +1,4 @@
-theme = "gruvbox"
+theme = "base16_transparent"
 
 [editor]
 line-number = "relative"
@@ -14,7 +14,7 @@ character = "|"
 skip-levels = 0
 
 [editor.statusline]
-left = ["mode", "file-modification-indicator", "file-name", "position", "spacer", "spinner"]
+left = ["mode", "file-modification-indicator", "file-name", "position", "position-percentage", "spacer", "spinner"]
 center = []
 right = ["diagnostics", "spacer", "selections", "spacer", "file-encoding", "file-line-ending", "file-type"]
 separator = "|"
