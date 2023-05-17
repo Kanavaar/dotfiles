@@ -14,7 +14,7 @@ character = "|"
 skip-levels = 0
 
 [editor.statusline]
-left = ["mode", "spacer", "position", "spacer", "spinner"]
+left = ["mode", "file-modification-indicator", "file-name", "position", "spacer", "spinner"]
 center = []
 right = ["diagnostics", "spacer", "selections", "spacer", "file-encoding", "file-line-ending", "file-type"]
 separator = "|"
@@ -23,6 +23,9 @@ separator = "|"
 insert = "<I>"
 normal = "<N>"
 select = "<V>"
+
+[editor.lsp]
+display-inlay-hints = true
 
 
 [keys.normal]
