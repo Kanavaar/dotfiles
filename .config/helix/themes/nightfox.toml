@@ -1,0 +1,4 @@
+inherits = "nightfox"
+
+"ui.background" = "#080808"
+"ui.foreground" = "#f5f5f5"
