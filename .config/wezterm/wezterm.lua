@@ -3,18 +3,18 @@ local font= require("cfg.font")
 
 return {
   font = wezterm.font(font),
-  color_scheme = "nightfox",
-  -- color_scheme = "Catppuccin Mocha",
+  -- color_scheme = "Everblush",
+  color_scheme = "Kanagawa (Gogh)",
   window_padding = {
     top = 0,
     bottom = 0,
     left = 0,
     right = 0,
   },
-  colors = {
-    background = "#080808",
-    foreground = "#F5F5F5",
-  },
+  -- colors = {
+  --   background = "#080808",
+  --   foreground = "#F5F5F5",
+  -- },
   enable_tab_bar = false,
   enable_wayland = true,
   enable_scroll_bar = false,
