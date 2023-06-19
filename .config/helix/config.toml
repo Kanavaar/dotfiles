@@ -1,4 +1,4 @@
-theme = "nightfox"
+theme = "kanagawa"
 
 [editor]
 line-number = "relative"
@@ -16,7 +16,7 @@ skip-levels = 0
 [editor.statusline]
 left = ["mode", "file-modification-indicator", "file-name", "position", "position-percentage", "spacer", "spinner"]
 center = []
-right = ["diagnostics", "spacer", "selections", "spacer", "file-encoding", "file-line-ending", "file-type"]
+right = ["diagnostics", "spacer", "file-type"]
 separator = "|"
 
 [editor.statusline.mode]
