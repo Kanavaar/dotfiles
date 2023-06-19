@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+
+search_term=$(echo "$*" | sed 's/ /+/g')
+
+if [ -z "$1" ]; then
+  echo "ERROR: please enter a search term"
+else
+  curl -s "https://api.urbandictionary.com/v0/define?term=$search_term" | \
+    jq '.list[] | {word: .word, definition: .definition, example: .example}' | \
+    sed 's/[{}""\r\n\r\n\\]//g' | \
+    sed 's/  //g' | \
+    $PAGER
+fi
