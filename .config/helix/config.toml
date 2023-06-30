@@ -1,15 +1,17 @@
-theme = "kanagawa"
+theme = "gruvbox"
 
 [editor]
 line-number = "relative"
 mouse = false
 bufferline = "multiple"
+color-modes = true
 
 [editor.cursor-shape]
 insert = "bar"
 
 [editor.indent-guides]
 render = true
+rainbow-option = "dim"
 character = "|"
 skip-levels = 0
 
@@ -26,6 +28,7 @@ select = "<V>"
 
 [editor.lsp]
 display-inlay-hints = true
+snippets = true
 
 
 [keys.normal]

@@ -1,0 +1,31 @@
+[colors]
+background = '#090a14'
+foreground = '#ebede9'
+cursor_fg = '#090a14'
+cursor_bg = '#090a14'
+cursor_border = '#ebede9'
+
+ansi = [
+  black =   '0x10141f',
+  red =     '0xa53030',
+  green =   '0x75a743',
+  yellow =  '0xbe772b',
+  blue =    '0x3c5e8b',
+  magenta = '0x7a367b',
+  cyan =    '0x73bed3',
+  white =   '0xa8b5b2',
+]
+
+brights = [
+  black =   '0x151d28',
+  red =     '0xcf573c',
+  green =   '0xa8ca58',
+  yellow =  '0xde9e41',
+  blue =    '0x4f8fba',
+  magenta = '0xa23e8c',
+  cyan =    '0xa4dddb',
+  white =   '0xc7cfcc',
+]
+
+[metadata]
+origin_url = 'https://lospec.com/palette-list/apollo'
