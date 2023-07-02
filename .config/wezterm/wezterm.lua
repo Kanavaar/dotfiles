@@ -3,6 +3,7 @@ local font= require("cfg.font")
 
 return {
   font = wezterm.font(font),
+  font_size = 11,
   color_scheme = "GruvboxDark",
   -- color_scheme = "Catppuccin Mocha",
   window_padding = {
@@ -11,10 +12,6 @@ return {
     left = 0,
     right = 0,
   },
-  -- colors = {
-  --   background = "#080808",
-  --   foreground = "#F5F5F5",
-  -- },
   enable_tab_bar = false,
   enable_wayland = true,
   enable_scroll_bar = false,
