@@ -1,0 +1,15 @@
+[buildPlans.iosevka-custom]
+family = "Iosevka Custom"
+spacing = "normal"
+serifs = "slab"
+no-cv-ss = false
+export-glyph-names = true
+
+  [buildPlans.iosevka-custom.variants]
+  inherits = "ss15"
+
+    [buildPlans.iosevka-custom.variants.design]
+    zero = "tall-reverse-slashed"
+
+  [buildPlans.iosevka-custom.ligations]
+  inherits = "dlig"
