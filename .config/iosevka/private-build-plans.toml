@@ -1,15 +1,18 @@
-[buildPlans.iosevka-custom]
-family = "Iosevka Custom"
+[buildPlans.ioseyka]
+family = "Ioseyka"
 spacing = "normal"
-serifs = "slab"
+serifs = "sans"
 no-cv-ss = false
 export-glyph-names = true
 
-  [buildPlans.iosevka-custom.variants]
+  [buildPlans.ioseyka.variants]
   inherits = "ss15"
 
-    [buildPlans.iosevka-custom.variants.design]
+    [buildPlans.ioseyka.variants.design]
+    long-s = "bent-hook-serifless"
+    eszet = "longs-s-lig"
     zero = "tall-reverse-slashed"
+    three = "flat-top"
 
-  [buildPlans.iosevka-custom.ligations]
+  [buildPlans.ioseyka.ligations]
   inherits = "dlig"
