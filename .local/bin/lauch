@@ -1,0 +1,12 @@
+#!/usr/bin/env sh
+
+if command -v sk; then
+  programm=$(ls $(echo $PATH | sed 's/:/ /g') | sk)
+else
+  programm=$(ls $(echo $PATH | sed 's/:/ /g') | fzf)
+fi
+if command -v swallow &> /dev/null; then
+  exec swallow $programm & disown && exit
+else
+  exec $programm
+fi
