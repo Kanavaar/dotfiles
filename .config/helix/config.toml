@@ -12,8 +12,7 @@ insert = "bar"
 [editor.indent-guides]
 render = true
 rainbow-option = "dim"
-character = "|"
-skip-levels = 0
+character = "│"
 
 [editor.statusline]
 left = ["mode", "file-modification-indicator", "file-name", "position", "position-percentage", "spacer", "spinner"]
