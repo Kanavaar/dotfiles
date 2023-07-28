@@ -15,8 +15,8 @@ rainbow-option = "dim"
 character = "│"
 
 [editor.statusline]
-left = ["mode", "file-modification-indicator", "file-name", "position", "position-percentage", "spacer", "spinner"]
-center = []
+left = ["mode", "spacer", "file-modification-indicator", "file-name", "position", "position-percentage", "spacer", "spinner"]
+center = ["separator", "version-control", "separator"]
 right = ["diagnostics", "spacer", "file-type"]
 separator = "|"
 
