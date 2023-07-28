@@ -6,6 +6,13 @@ mouse = false
 bufferline = "multiple"
 color-modes = true
 
+[editor.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
+'"' = '"'
+'<' = '>'
+
 [editor.cursor-shape]
 insert = "bar"
 
@@ -29,7 +36,6 @@ select = "<V>"
 display-inlay-hints = true
 snippets = true
 display-messages = true
-
 
 [keys.normal]
 esc = ["collapse_selection", "keep_primary_selection"]
