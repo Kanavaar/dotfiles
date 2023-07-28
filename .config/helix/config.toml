@@ -28,6 +28,7 @@ select = "<V>"
 [editor.lsp]
 display-inlay-hints = true
 snippets = true
+display-messages = true
 
 
 [keys.normal]
