@@ -3,7 +3,7 @@ theme = "gruvbox"
 [editor]
 line-number = "relative"
 mouse = false
-bufferline = "multiple"
+bufferline = "always"
 color-modes = true
 
 [editor.auto-pairs]
@@ -16,14 +16,17 @@ color-modes = true
 [editor.cursor-shape]
 insert = "bar"
 
+[editor.file-picker]
+hidden = false
+
 [editor.indent-guides]
 render = true
 rainbow-option = "dim"
 character = "│"
 
 [editor.statusline]
-left = ["mode", "spacer", "file-modification-indicator", "file-name", "position", "position-percentage", "spacer", "spinner"]
-center = ["separator", "version-control", "separator"]
+left = ["mode", "spacer", "file-name", "position", "position-percentage", "spacer", "spinner"]
+center = []
 right = ["diagnostics", "spacer", "file-type"]
 separator = "|"
 
@@ -39,4 +42,13 @@ display-messages = true
 
 [keys.normal]
 esc = ["collapse_selection", "keep_primary_selection"]
+
+[keys.normal."space"]
+q = ":q"
+"/" = "toggle_comments"
+
+[keys.normal."space".f]
+f = "file_picker"
+s = ":w"
+w = "global_search"
 
