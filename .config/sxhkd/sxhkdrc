@@ -4,7 +4,7 @@
 
 # terminal emulator
 super + Return
-	wezterm start
+	alacritty
 
 # program launcher
 super + shift + @space
@@ -140,7 +140,7 @@ super + b
 super + s
   spotify
 
-super + d 
+super + d
  discord
 
 super + t
@@ -149,7 +149,7 @@ super + t
 # Audio Keybindings
 
 super + v
-  wezterm start --class pulsemixer pulsemixer
+  alacritty --class pulsemixer -e pulsemixer
 
 super + space
   playerctl play-pause
