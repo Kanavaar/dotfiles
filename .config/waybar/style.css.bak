@@ -1,0 +1,109 @@
+* {
+    font-family: "CaskaydiaCove NF";
+    font-size: 13;
+    /* font-weight: bold; */
+    border-radius: 0px;
+}
+
+window#waybar {
+    background-color: #1f1f28;
+    color: #dcd7ba;
+    border-radius: 0px;
+    margin: 10rem;
+}
+
+.modules-right {
+    font-size: 10px;
+    margin-right: 0.5rem;
+}
+.modules-left {
+    margin-left: 0.5rem;
+}
+tooltip {
+    border-radius: 10px;
+}
+tooltip label {
+    border-radius: 10px;
+}
+tooltip * {
+    border-radius: 10px;
+}
+#workspaces button {
+    margin: 0;
+    font-weight: bolder;
+    font-style: normal;
+    margin: 0.2rem 0.1rem;
+    border-radius: 20px;
+}
+button:hover {
+    box-shadow: inherit;
+    text-shadow: inherit;
+    background: inherit;
+}
+#workspaces button.active {
+    color: #ebdbb2;
+    background-color: #7e9cd8;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.818);
+    transition: all 0.1s ease-in-out;
+}
+
+#clock,
+#custom-weather {
+    font-weight: bolder;
+    text-shadow: 0 0 5px rgb(0, 0, 0);
+    color: #e6c384;
+}
+
+#clock {
+    padding: 0 0 0 1.5em;
+}
+#custom-weather {
+    padding: 0 1.5em 0 0.5em;
+}
+#memory {
+    color: #76946a;
+    padding: 0 0.3em;
+}
+
+#pulseaudio {
+    margin: 0;
+    padding: 0 0.5em 0 0.4em;
+    color: #e6c384;
+}
+
+#backlight {
+    margin: 0;
+    padding: 0 0.5em 0 0.4em;
+    color: #d8a657;
+}
+#cpu {
+    margin: 0;
+    padding: 0 0.1em 0 0.1em;
+    color: #a9b665;
+}
+#network {
+    margin: 0;
+    padding: 0 0.4em 0 0.5em;
+    color: #d8a657;
+}
+#custom-cycle_wall {
+    margin: 0;
+    padding: 0 0.5em;
+    color: #d3869b;
+}
+
+#language {
+    margin: 0;
+    padding: 0 0.1em;
+    color: #d3869b;
+}
+#tray {
+    margin: 0;
+    padding: 0 0.2em;
+    color: #d3869b;
+}
+#battery {
+    margin: 0;
+    padding: 0 0.5em 0 0.4em;
+    color: #a9b665;
+}
