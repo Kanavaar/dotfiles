@@ -1,6 +1,6 @@
 {
     "label" : "lock",
-    "action" : "gtklock",
+    "action" : "swaylock -c 282828",
     "text" : "Lock",
     "keybind" : "l"
 }
@@ -20,7 +20,7 @@
     "label" : "shutdown",
     "action" : "systemctl poweroff",
     "text" : "Shutdown",
-    "keybind" : "s"
+    "keybind" : "p"
 }
 {
     "label" : "suspend",
