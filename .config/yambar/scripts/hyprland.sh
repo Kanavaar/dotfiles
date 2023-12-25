@@ -14,5 +14,5 @@ fi
 echo "workspace|int|$workspace"
 echo ""
 
-sleep 0.5
+# sleep 0.3
 done 

@@ -6,7 +6,7 @@ bar:
   height: 30
   location: top
   background: 282828ff
-  font: CaskaydiaCode NF
+  font: CaskaydiaCode NF:pixelsize=14
 
   
   left:
