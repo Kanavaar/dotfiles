@@ -166,6 +166,9 @@ super + ctrl + {Up,Down}
 {XF86AudioRaiseVolume,XF86AudioLowerVolume}
   ~/.local/bin/change-volume {up,down}
 
+{XF86AudioNext,XF86AudioPrev}
+  playerctl {next,previous}
+
 super + ctrl + Left
   playerctl previous
 
