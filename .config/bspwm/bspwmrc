@@ -10,6 +10,10 @@ exec /home/tilman/.config/polybar/launcher_bspwm.sh &
 # Picom
 picom &
 
+# Dunst
+pkill dunst
+dunst &
+
 bspc monitor -d 1 2 3 4 5 6 7 8 9
 
 bspc config border_width         2
@@ -30,8 +34,7 @@ bspc rule -a pulsemixer state=floating
 bspc rule -a mpv state=fullscreen
 
 # Wallpaper
-betterlockscreen -u ~/.config/walls/plane.png --fx none
-betterlockscreen -w
+feh --bg-scale ~/.config/walls/color-wave-gruv.png
 
 # Caffeine
 caffeine &
