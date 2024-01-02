@@ -12,7 +12,7 @@ set bargravity center
 set border 2
 set barborder 3
 set barpadding 1 1
-set font "Iosevka:pixelsize=12"
+set font "CaskaydiaCove Nerd Font:pixelsize=12"
 set bgcolor #222222
 set fgcolor #f9f9f9
 set bwcolor #222222
@@ -26,7 +26,7 @@ bind s-b exec qutebrowser
 bind s-D exec rofi -show drun
 bind s-x exec powermenu
 bind s-S exec screenshot
-bind s-Return exec alacritty
+bind s-Return exec wezterm start
 bind s-q delete
 bind s-Q only
 bind s-t time
@@ -34,6 +34,7 @@ bind s-h focusleft
 bind s-j focusdown
 bind s-k focusup
 bind s-l focusright
+bind s-x powermenu
 
 
 bind b exec qutebrowser
