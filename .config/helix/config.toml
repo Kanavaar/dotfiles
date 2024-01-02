@@ -52,3 +52,6 @@ f = "file_picker"
 s = ":w"
 w = "global_search"
 
+[keys.normal."space".w]
+c = "wclose"
+
